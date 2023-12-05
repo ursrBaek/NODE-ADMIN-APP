@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+      display: block;
+      text-align: left;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-btn {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <img src="/images/2023060801867_0.jpg" alt="Main Image">
+  <h2>Login</h2>
+  <form class="login-form">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="button" class="login-btn"  onclick="fnValidation(event);">Login</button>
+  </form>
+</div>
+<script>
+  function fnValidation(e) {
+  e.preventDefault();
+  
+  if(document.getElementById('email').value == '') {
+    alert('메일주소 아이디를 입력해주세요.')
+    document.getElementById('email').focus();
+    return false;
+  }
+
+  if(document.getElementById('password').value == '') {
+    alert('사용자 암호를 입력해주세요.')
+    document.getElementById('password').focus();
+    return false;
+  }
+
+  alert('로그인 되었슴다~');
+}
+</script>
+</body>
+</html>
